@@ -1,0 +1,13 @@
+.tests-container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+
+  padding: 1rem;
+  border: 1px solid var(--color-secondary);
+  border-radius: 8px;
+}
+
+.tests-container > h3 {
+  margin: 0;
+}

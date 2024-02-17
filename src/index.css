@@ -1,0 +1,102 @@
+:root {
+  --color-success: #198754;
+  --color-danger: #dc3545;
+  --color-secondary: #6c757d;
+  --color-warning: #ffc107;
+  --color-primary: #0d6efd;
+}
+
+html {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+button {
+  transition: all 0.1s;
+  border-radius: 8px;
+  border: 1px solid var(--color-secondary);
+  padding: 0.5rem;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+button.btn-danger {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+button.btn-success {
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+button.btn-primary {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+button.outline {
+  border: none !important;
+  padding: 0;
+}
+
+button:disabled {
+  color: #1010104d;
+  border: 1px solid #1010104d;
+  opacity: 0.7;
+}
+
+button:active {
+  border: 1px solid transparent;
+  opacity: 1;
+}
+
+input {
+  font-size: 1em;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 0.75rem;
+  }
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .test-card-container input {
+    width: 100%;
+  }
+  .question-title {
+    flex-direction: column;
+    align-items: center;
+  }
+  .question-title img {
+    max-width: 100%;
+  }
+  .question-body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

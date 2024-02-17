@@ -1,0 +1,278 @@
+[
+  {
+    "Name": "Тест на эрудицию",
+    "Id": 1,
+    "QuestionsList": [
+      {
+        "text": "С какой головой изображается индуистский бог Ганеша?",
+        "imageURL": "",
+        "Id": 2,
+        "answers": [
+          {
+            "text": "Слона",
+            "isCorrect": true,
+            "value": 1
+          },
+          {
+            "text": "Обезьяны",
+            "isCorrect": false,
+            "value": 2
+          },
+          {
+            "text": "Коровы",
+            "isCorrect": false,
+            "value": 3
+          },
+          {
+            "text": "Собаки",
+            "isCorrect": false,
+            "value": 4
+          }
+        ]
+      },
+      {
+        "text": "Кого Г. Вицин сыграл в серии фильмов режиссера Л. Гайдая?",
+        "imageURL": "",
+        "Id": 1,
+        "answers": [
+          {
+            "text": "Трус",
+            "isCorrect": true,
+            "value": 1
+          },
+          {
+            "text": "Шурик",
+            "isCorrect": false,
+            "value": 2
+          },
+          {
+            "text": "Бывалый",
+            "isCorrect": false,
+            "value": 3
+          },
+          {
+            "text": "Балбес",
+            "isCorrect": false,
+            "value": 4
+          }
+        ]
+      },
+      {
+        "text": "Цветы какого из этих растений не голубого цвета?",
+        "imageURL": "",
+        "Id": 3,
+        "answers": [
+          {
+            "text": "Василек",
+            "isCorrect": false,
+            "value": 1
+          },
+          {
+            "text": "Незабудка",
+            "isCorrect": false,
+            "value": 2
+          },
+          {
+            "text": "Лютик",
+            "isCorrect": true,
+            "value": 3
+          },
+          {
+            "text": "Цикорий",
+            "isCorrect": false,
+            "value": 4
+          }
+        ]
+      },
+      {
+        "text": "Какая пряность по форме напоминает звездочку?",
+        "imageURL": "",
+        "Id": 4,
+        "answers": [
+          {
+            "text": "Майоран",
+            "isCorrect": false,
+            "value": 1
+          },
+          {
+            "text": "Кардамон",
+            "isCorrect": false,
+            "value": 2
+          },
+          {
+            "text": "Гвоздика",
+            "isCorrect": false,
+            "value": 3
+          },
+          {
+            "text": "Бадьян",
+            "isCorrect": true,
+            "value": 4
+          }
+        ]
+      },
+      {
+        "text": "Какое из этих растений — плотоядное?",
+        "imageURL": "",
+        "Id": 5,
+        "answers": [
+          {
+            "text": "Володушка",
+            "isCorrect": false,
+            "value": 1
+          },
+          {
+            "text": "Росянка",
+            "isCorrect": true,
+            "value": 2
+          },
+          {
+            "text": "Мытник",
+            "isCorrect": false,
+            "value": 3
+          },
+          {
+            "text": "Астрагал",
+            "isCorrect": false,
+            "value": 4
+          }
+        ]
+      },
+      {
+        "text": "Как называется человек, покоряющий крыши многоэтажных домов?",
+        "imageURL": "",
+        "Id": 6,
+        "answers": [
+          {
+            "text": "Диггер",
+            "isCorrect": false,
+            "value": 1
+          },
+          {
+            "text": "Сталкер",
+            "isCorrect": false,
+            "value": 2
+          },
+          {
+            "text": "Руфер",
+            "isCorrect": true,
+            "value": 3
+          },
+          {
+            "text": "Байкер",
+            "isCorrect": false,
+            "value": 4
+          }
+        ]
+      },
+      {
+        "text": "Как называли строителя в старину?",
+        "imageURL": "",
+        "Id": 7,
+        "answers": [
+          {
+            "text": "Бондарь",
+            "isCorrect": false,
+            "value": 1
+          },
+          {
+            "text": "Бортник",
+            "isCorrect": false,
+            "value": 2
+          },
+          {
+            "text": "Зодчий",
+            "isCorrect": true,
+            "value": 3
+          },
+          {
+            "text": "Кормчий",
+            "isCorrect": false,
+            "value": 4
+          }
+        ]
+      },
+      {
+        "text": "У какого животного самые большие глаза относительно тела?",
+        "imageURL": "",
+        "Id": 8,
+        "answers": [
+          {
+            "text": "У лемура",
+            "isCorrect": false,
+            "value": 1
+          },
+          {
+            "text": "У летучей мыши",
+            "isCorrect": false,
+            "value": 2
+          },
+          {
+            "text": "У долгопята",
+            "isCorrect": true,
+            "value": 3
+          },
+          {
+            "text": "У тупайи",
+            "isCorrect": false,
+            "value": 4
+          }
+        ]
+      },
+      {
+        "text": "Детинцем на Руси называли...",
+        "imageURL": "",
+        "Id": 9,
+        "answers": [
+          {
+            "text": "Кремль",
+            "isCorrect": true,
+            "value": 1
+          },
+          {
+            "text": "Школу",
+            "isCorrect": false,
+            "value": 2
+          },
+          {
+            "text": "Монастырь",
+            "isCorrect": false,
+            "value": 3
+          },
+          {
+            "text": "Княжеский терем",
+            "isCorrect": false,
+            "value": 4
+          }
+        ]
+      },
+      {
+        "text": "Что в японском ресторане называется «осибори»?",
+        "imageURL": "",
+        "Id": 10,
+        "answers": [
+          {
+            "text": "Палочки для еды",
+            "isCorrect": false,
+            "value": 1
+          },
+          {
+            "text": "Тарелка для суши",
+            "isCorrect": false,
+            "value": 2
+          },
+          {
+            "text": "Соевый соус",
+            "isCorrect": false,
+            "value": 3
+          },
+          {
+            "text": "Влажное полотенце",
+            "isCorrect": true,
+            "value": 4
+          }
+        ]
+      }
+    ]
+  }
+]
