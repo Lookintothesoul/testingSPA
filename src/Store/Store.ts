@@ -9,12 +9,16 @@ import {
 } from "mobx-state-tree";
 import { getTestDuration } from "../Helpers/Utils.ts";
 
+//Глобальный стор
+
+//Модель ответа
 const Answer = types.model({
   text: types.optional(types.string, ""),
   isCorrect: types.optional(types.boolean, false),
   value: types.number,
 });
 
+//Модель вопроса
 const Question = types
   .model({
     text: types.optional(types.string, ""),
@@ -34,6 +38,7 @@ const Question = types
     },
   }));
 
+//Модель теста
 const Test = types
   .model({
     Id: types.number,
@@ -83,6 +88,7 @@ const Test = types
     },
   }));
 
+//Главный стор
 export const StoreRoot = types
   .model({
     TestList: types.optional(types.array(Test), []),

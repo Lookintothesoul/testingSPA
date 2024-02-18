@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { StoreContext } from "../../Context/StoreContext.ts";
 import { IStore } from "../../Store/Store.ts";
 
+//Получение прогресса прохождения теста
 const getTestProgress = (Store: IStore): [number, string] => {
   const progress = Math.round(
     (100 * Store.getCurrentTest().getProgress()) /
@@ -17,6 +18,7 @@ const getTestProgress = (Store: IStore): [number, string] => {
   return [0, " progress-50"];
 };
 
+//Компонент полоски прогресса прохождения теста
 export const ProgressBar = observer(() => {
   const { Store } = useContext(StoreContext);
   const [progress, className] = getTestProgress(Store);

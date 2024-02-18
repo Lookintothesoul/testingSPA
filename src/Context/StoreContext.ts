@@ -5,6 +5,7 @@ export interface StoreContext {
   Store: IStore;
 }
 
+//Контекст стора
 export const StoreContext: React.Context<StoreContext> = createContext(
   {} as StoreContext,
 );

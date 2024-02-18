@@ -7,11 +7,13 @@ import { IAnswer } from "../../Store/Store.ts";
 import { FaCheck } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 
+//Подробный отчет о результате теста
 export const TestReport = observer(() => {
   const { Store } = useContext(StoreContext);
   const currReport = Store.CurrentReport[0];
   const navigation = useNavigate();
 
+  //Если пользователь перезагрузил страницу, перекидываем его на страницу результатов
   useEffect(() => {
     if (!currReport) {
       navigation("/results");
@@ -19,6 +21,7 @@ export const TestReport = observer(() => {
     }
   }, []);
 
+  //Возвращение к результатам тестов
   const goBackResults = () => {
     Store.clearReport();
     navigation("/results");

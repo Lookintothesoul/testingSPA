@@ -2,8 +2,10 @@ import { ITest, ITestSnapIn, ITestSnapOut } from "../Store/Store.ts";
 import { getSnapshot } from "mobx-state-tree";
 import dayjs from "dayjs";
 
+//Форматы
 export const DateFormat = "DD.MM.YYYY HH:mm:ss";
 
+//Перетасовывание массива
 const shuffleArr = <T>(arr: T[]) => {
   for (let i = arr.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1)); // случайный индекс от 0 до i
@@ -11,6 +13,7 @@ const shuffleArr = <T>(arr: T[]) => {
   }
 };
 
+//Получение снимка модели теста для прохождения
 export const getNewTestSnapShot = (test: ITest, value: string): ITestSnapIn => {
   const selectTest: ITestSnapOut = getSnapshot(test);
 
@@ -29,6 +32,7 @@ export const getNewTestSnapShot = (test: ITest, value: string): ITestSnapIn => {
   };
 };
 
+//Форматирование даты
 const reverseDate = (date: string) => {
   const splitDate = date.split(" ");
   const reverseDate = splitDate[0].split(".").reverse().join("-");
@@ -36,6 +40,7 @@ const reverseDate = (date: string) => {
   return `${reverseDate} ${splitDate[1]}`;
 };
 
+//Получение час,мин,сек на прохождение теста
 export const getTestDuration = (date: string) => {
   const currentDate = dayjs();
   const startDate = dayjs(reverseDate(date));

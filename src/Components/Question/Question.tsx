@@ -5,6 +5,7 @@ import { getSnapshot } from "mobx-state-tree";
 import { useContext } from "react";
 import { StoreContext } from "../../Context/StoreContext.ts";
 
+//Получение цвета для правильного/неправильного ответа
 const getAnswerColor = (question: IQuestion, answer: IAnswer): string => {
   const userSelectVal = question.getUserSelect();
 
@@ -19,9 +20,11 @@ const getAnswerColor = (question: IQuestion, answer: IAnswer): string => {
   return "";
 };
 
+//Компонент вопроса из теста
 export const Question = observer(({ question }: { question: IQuestion }) => {
   const { Store } = useContext(StoreContext);
 
+  //Выбор ответа
   const handleChange = (val: number) => {
     question.setUserSelect(val);
     Store.getCurrentTest().setProgress(
@@ -49,7 +52,7 @@ export const Question = observer(({ question }: { question: IQuestion }) => {
             >
               <input
                 onChange={() => handleChange(answer.value)}
-                type="radio"
+                type="checkbox"
                 disabled={question.getUserSelect() !== 0}
                 name={`question-${question.Id}`}
                 key={`question-${question.Id}`}

@@ -13,11 +13,13 @@ import {
 } from "../../Helpers/LocalStorage.ts";
 import { applySnapshot, getSnapshot } from "mobx-state-tree";
 
+//Страница прохождения теста
 export const PassingTest = observer(() => {
   const { Store } = useContext(StoreContext);
   const navigation = useNavigate();
   const curTest = Store.getCurrentTest();
 
+  //Проверяем, был ли открытый тест до загрузки страницы, если есть, отображаем его
   useEffect(() => {
     getCurrentTestLocal().then((localTest) => {
       if (localTest !== null) {
@@ -35,17 +37,20 @@ export const PassingTest = observer(() => {
     saveCurrentTestLocal(getSnapshot(curTest));
   }, []);
 
+  //Переключение на след. вопрос
   const handleNextQuestion = () => {
     curTest.setCurrentQuestion(curTest.CurrentQuestion + 1);
     saveCurrentTestLocal(getSnapshot(curTest));
   };
 
+  //Заверешние теста
   const handleEndTest = () => {
     Store.addResult();
     addResultsLocal(getSnapshot(Store.Results));
     navigation("/results");
   };
 
+  //Закрытие теста
   const handleCloseTest = () => {
     const result = confirm("Тест не завершен, продолжить?");
 

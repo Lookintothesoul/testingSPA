@@ -5,9 +5,11 @@ import { StoreContext } from "../../Context/StoreContext.ts";
 import "./TestList.css";
 import { clearCurrentTestLocal } from "../../Helpers/LocalStorage.ts";
 
+//Страница со списков тестов
 export const TestList = observer(() => {
   const { Store } = useContext(StoreContext);
 
+  //При каждом возвращении на эту страницу очищаем текущий тест из стора и локального хранилища
   useEffect(() => {
     Store.clearCurrentTest();
     clearCurrentTestLocal();

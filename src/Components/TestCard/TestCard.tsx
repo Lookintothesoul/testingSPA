@@ -7,15 +7,18 @@ import { useNavigate } from "react-router-dom";
 import { applySnapshot } from "mobx-state-tree";
 import { getNewTestSnapShot } from "../../Helpers/Utils.ts";
 
+//Компонент карточки теста на странице тестов
 export const TestCard = observer(({ test }: { test: ITest }) => {
   const [value, setValue] = useState<string>("");
   const { Store } = useContext(StoreContext);
   const navigation = useNavigate();
 
+  //Заполнение имени
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
+  //Переход к выбранному тесту
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     e.stopPropagation();

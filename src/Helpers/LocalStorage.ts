@@ -1,6 +1,7 @@
 import localforage from "localforage";
 import { ITestSnapOut } from "../Store/Store.ts";
 
+//Сохранение текущего теста локально
 export const saveCurrentTestLocal = (test: ITestSnapOut) => {
   localforage
     .setItem("currentTest", test)
@@ -11,6 +12,7 @@ export const saveCurrentTestLocal = (test: ITestSnapOut) => {
     });
 };
 
+//Очистка текущего теста из локального хранилища
 export const clearCurrentTestLocal = () => {
   localforage.setItem("currentTest", null).then((err) => {
     if (err) {
@@ -19,6 +21,7 @@ export const clearCurrentTestLocal = () => {
   });
 };
 
+//Получение текущего теста из локального хранилища
 export const getCurrentTestLocal = () =>
   localforage
     .getItem<ITestSnapOut>("currentTest")
@@ -31,6 +34,7 @@ export const getCurrentTestLocal = () =>
       return null;
     });
 
+//Добавление результата теста в локальное хранилище
 export const addResultsLocal = (results: ITestSnapOut[]) => {
   localforage
     .setItem<ITestSnapOut[]>("results", results)
@@ -41,6 +45,7 @@ export const addResultsLocal = (results: ITestSnapOut[]) => {
     });
 };
 
+//Получение результатов тестов из локального хранилища
 export const getResultsLocal = () =>
   localforage
     .getItem<ITestSnapOut[]>("results")
@@ -53,6 +58,7 @@ export const getResultsLocal = () =>
       return null;
     });
 
+//Очистка локального хранилища результатов теста
 export const clearResultsLocal = () => {
   localforage
     .setItem("results", [])

@@ -4,9 +4,11 @@ import { StoreContext } from "../../Context/StoreContext.ts";
 import { observer } from "mobx-react-lite";
 import { clearResultsLocal } from "../../Helpers/LocalStorage.ts";
 
+//Компонент списка результатов
 export const ResultList = observer(() => {
   const { Store } = useContext(StoreContext);
 
+  //Очистка результатов
   const handleClearResults = () => {
     const result = confirm("Вы уверены?");
 

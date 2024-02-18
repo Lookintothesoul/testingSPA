@@ -17,11 +17,13 @@ const Store: IStore = StoreRoot.create();
 
 function App() {
   const navigation = useNavigate();
+  //Получаем список тестов при загрузке страницы
   useEffect(() => {
     requests
       .GetQuestions()
       .then((res) => {
         Store.setTestList(res.data);
+        //Проверяем, есть ли сохраненные локально результаты, если есть, забираем их
         getResultsLocal().then((res) => {
           if (res) {
             applySnapshot(Store.Results, res);

@@ -6,10 +6,12 @@ import { StoreContext } from "../../Context/StoreContext.ts";
 import { applySnapshot } from "mobx-state-tree";
 import { getNewTestSnapShot } from "../../Helpers/Utils.ts";
 
+//Компонент результата прохождения теста
 export const ResultCard = ({ result }: { result: ITest }) => {
   const { Store } = useContext(StoreContext);
   const navigation = useNavigate();
 
+  //Перепройти тест
   const handleOpenTest = () => {
     const findTest = Store.TestList.find((test) => test.Id === result.Id);
 
@@ -32,6 +34,7 @@ export const ResultCard = ({ result }: { result: ITest }) => {
     alert("Тест не найден в доступных");
   };
 
+  //Открыть подробный отчет о прохождении теста
   const handleOpenReport = () => {
     Store.setCurrentReport(result);
     navigation("/results/report");
